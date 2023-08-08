@@ -20,19 +20,35 @@
   crossorigin=""></script>
 </head>
 <body class="h-screen">
-  <div class="absolute top-16 | w-screen | flex flex-col items-center">
-    <h1>IP Adress Tracker</h1>
-    <div class="h- w-1/3 | flex">
-      <input class="h-full w-11/12 | rounded-l-xl" type="text" placeholder="Search for any IP adress or domain">
-      <button class="h-full w-1/12 | rounded-r-xl | bg-black"></button>
+  <div class="absolute top-16 z-10 | w-screen h-screen | flex flex-col items-center">
+    <h1 class="text-white text-4xl font-medium | mb-8">IP Adress Tracker</h1>
+    <div class="h-12 w-11/12 md:w-1/3 | flex flex-row justify-center">
+      <input class="h-full w-5/6 md:w-11/12 | rounded-l-xl focus:outline-none | pl-6" type="text" placeholder="Search for any IP adress or domain">
+      <button class="h-full w-1/6 md:w-1/12 | rounded-r-xl | bg-veryDarkGray | flex items-center justify-center"><img class="select-none" src="images/icon-arrow.svg" alt="icon-arrow"></button>
     </div>
-    <div>
-
+    <div class="w-11/12 md:w-4/5 h-1/3 md:h-1/6 | mt-8 | rounded-xl | bg-white | flex flex-col md:flex-row items-center md:items-start">
+      <!-- Space for output API data -->
+      <div class="h-1/4 md:h-full md:w-1/4 pt-4 pl-4">
+        <h3 class="text-darkGray font-normal text-sm tracking-wider">IP ADDRESS</h3>
+        <h2 id="ip" class="h-1/2 md:border-r-1 border-darkGray md:my-auto"></h2>
+      </div>
+      <div class="h-1/4 md:h-full md:w-1/4 pt-4 pl-4">
+        <h3 class="text-darkGray font-normal text-sm tracking-wider">LOCATION</h3>
+        <h2 id="location" class="h-1/2 md:border-r-1 border-darkGray md:my-auto"></h2>
+      </div>
+      <div class="h-1/4 md:h-full md:w-1/4 pt-4 pl-4">
+        <h3 class="text-darkGray font-normal text-sm tracking-wider">TIMEZONE</h3>
+        <h2 id="timezone" class="h-1/2 md:border-r-1 border-darkGray md:my-auto"></h2>
+      </div>
+      <div class="h-1/4 md:h-full md:w-1/4 pt-4 pl-4">
+        <h3 class="text-darkGray font-normal text-sm tracking-wider">ISP</h3>
+        <h2 id="isp" class="h-1/2 md:my-auto"></h2>
+      </div>
     </div>
   </div>
   <img class="hidden md:block | w-screen | select-none" src="images/pattern-bg-desktop.png" alt="bg-desktop">
   <img class="md:hidden | top-0 | w-screen | select-none" src="images/pattern-bg-mobile.png" alt="bg-mobile">
-  <div id="map" class="h-full"></div>
+  <div id="map" class="h-full -z-20"></div>
   <script src="main.js"></script>
 </body>
 </html>
