@@ -1,0 +1,19 @@
+{
+  "name": "iptracker",
+  "version": "1.0.0",
+  "description": "![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.html",
+  "scripts": {
+    "watch": "npx tailwindcss -i ./input.css -o ./main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JIH7/iptracker.git"
+  },
+  "author": "Jeremy Helsel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JIH7/iptracker/issues"
+  },
+  "homepage": "https://github.com/JIH7/iptracker#readme"
+}
