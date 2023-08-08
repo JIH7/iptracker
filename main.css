@@ -620,6 +620,10 @@ video {
   height: max-content;
 }
 
+.h-2\/5 {
+  height: 40%;
+}
+
 .max-h-full {
   max-height: 100%;
 }
