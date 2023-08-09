@@ -1,3 +1,10 @@
+const GetUserIP = async () => {
+    res = await fetch('https://api.ipify.org?format=json');
+    data = await res.json();
+    FetchData(data.ip);
+}
+
+
 //Prevent scrolling because it is jank
 window.onscroll = () => {
     window.scrollTo(0, 0);
@@ -93,3 +100,6 @@ const FetchData = async (input) => {
     map.setView([data.location.lat, data.location.lng], 14);
     L.marker([data.location.lat, data.location.lng], {icon: locationIcon}).addTo(map);
 }
+
+
+GetUserIP();
