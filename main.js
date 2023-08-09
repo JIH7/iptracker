@@ -84,13 +84,8 @@ const FetchData = async (input) => {
 
     if (data.code) {
         errText.innerText = `Error code ${data.code}. ${data.messages}`;
-        ipText.innerText = '';
-        locationText.innerText = '';
-        timezoneText.innerText = '';
-        ispText.innerText = '';
         return;
     }
-    console.log(data);
 
     ipText.innerText = data.ip;
     locationText.innerText = `${data.location.city}, ${data.location.region} ${data.location.postalCode}`;
